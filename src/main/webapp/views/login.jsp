@@ -1,20 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script>
-    let login_form = {
-      init:function (){
-        $('#login_btn').click(function (){
-          login_form.send();
-        });
-      },
-      send:function (){
-        $('#login_form').attr({
-          'action':'/loginimpl',
-          'method':'post'
-        });
-        $('#login_form').submit();
-      }
-    };
+
     $(function (){
       login_form.init();
     });
@@ -101,10 +88,10 @@
 
       <div class="container">
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" placeholder="Enter Username" name="id" required>
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="pwd" required>
 
 
       </div>

@@ -77,21 +77,21 @@
 <!-- html start -->
 <div class="col-sm-8 text-left">
   <!-- form id와 name 다 있어야함-->
-  <form id="register_form" name="register_form">
+  <form id="update_form" name="register_form">
     <div class="container">
-      <h1>Register</h1>
+      <h1>detail</h1>
       <p>Please fill in this form to create an account.</p>
       <hr>
       <label for="name"><b>name</b></label>
-      <input type="text" placeholder="Enter Name" name="name" id="name" required>
+      <input type="text" placeholder="Enter Name" name="name" id="name" value="${gcust.name}" required>
       <label for="id"><b>id</b></label>
-      <input type="text" placeholder="Enter Email" name="id" id="id" required>
+      <input type="text" placeholder="Enter Email" name="id" id="id" value="${gcust.id}" required>
 
       <label for="pwd"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required>
-
+      <input type="password" placeholder="Enter Password" name="pwd" id="pwd" value="${gcust.pwd}" required>
       <hr>
-      <button id="register_btn" class="btn btn-default">Register</button>
+      <button id="update_btn" class="btn btn-default">Update</button>
+      <button id="remove_btn" class="btn btn-default">Remove</button>
       <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
     </div>
