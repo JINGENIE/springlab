@@ -1,7 +1,8 @@
-package com.kbstar.cust;
+package com.kbstar.marker;
 
-import com.kbstar.dto.Cust;
-import com.kbstar.service.CustService;
+import com.kbstar.dto.Adm;
+import com.kbstar.dto.Marker;
+import com.kbstar.service.MarkerService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +13,10 @@ import org.springframework.dao.DuplicateKeyException;
 @SpringBootTest
 class InsertTest {
     @Autowired
-    CustService service;
+    MarkerService service;
     @Test
     void contextLoads() {
-        Cust obj = new Cust("id21","pwd010","ddaengja");
+        Marker obj = new Marker(2000,"title00","target00",1.1,1.1,"image.jpg","S");
         try {
             service.register(obj);
             log.info("등록정상");

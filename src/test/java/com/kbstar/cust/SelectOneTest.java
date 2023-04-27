@@ -6,25 +6,22 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.dao.DuplicateKeyException;
+
+import java.util.List;
 
 @Slf4j
 @SpringBootTest
-class InsertTest {
+class SelectOneTest {
     @Autowired
     CustService service;
     @Test
     void contextLoads() {
-        Cust obj = new Cust("id21","pwd010","ddaengja");
+          Cust cust = null;
         try {
-            service.register(obj);
-            log.info("등록정상");
+            cust = service.get("id01");
         } catch (Exception e) {
-           if(e instanceof DuplicateKeyException){
-               log.info("ID가 중복되었습니다.");
-           }else {
-               log.info("시스템 장애입니다.");
-           }
+            log.info("error...");
+            e.printStackTrace();
         }
     }
 

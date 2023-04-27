@@ -59,20 +59,20 @@ public class AjaxImplController {
     @RequestMapping("/markers")
     public Object markers(String loc) {
         List<Marker> list = new ArrayList<>();
-        if (loc.equals("s")) {
-            list.add(new Marker(100, "국밥", "http://www.nate.com", 37.379617, 126.977041, "a.jpeg", "s"));
-            list.add(new Marker(101, "짬뽕", "http://www.naver.com", 37.377617, 126.973041, "b.jpeg", "s"));
-            list.add(new Marker(102, "삼겹살", "http://www.daum.net", 37.376617, 126.971041, "c.jpeg", "s"));
+        if (loc.equals("S")) {
+            list.add(new Marker(100, "국밥", "http://www.nate.com", 37.379617, 126.977041, "a.jpeg", "S"));
+            list.add(new Marker(101, "짬뽕", "http://www.naver.com", 37.377617, 126.973041, "b.jpeg", "S"));
+            list.add(new Marker(102, "삼겹살", "http://www.daum.net", 37.376617, 126.971041, "c.jpeg", "S"));
 
-        } else if (loc.equals("b")) {
-            list.add(new Marker(103, "국밥", "http://www.nate.com", 35.111495, 129.13933, "a.jpeg", "b"));
-            list.add(new Marker(104, "짬뽕", "http://www.naver.com", 35.122495, 129.14933, "b.jpeg", "b"));
-            list.add(new Marker(105, "삼겹살", "http://www.daum.net", 35.131495, 129.13133, "c.jpeg", "b"));
+        } else if (loc.equals("B")) {
+            list.add(new Marker(103, "국밥", "http://www.nate.com", 35.111495, 129.13933, "a.jpeg", "B"));
+            list.add(new Marker(104, "짬뽕", "http://www.naver.com", 35.122495, 129.14933, "b.jpeg", "B"));
+            list.add(new Marker(105, "삼겹살", "http://www.daum.net", 35.131495, 129.13133, "c.jpeg", "B"));
 
-        } else if (loc.equals("j")) {
-            list.add(new Marker(106, "국밥", "http://www.nate.com", 33.2641205, 126.570076, "a.jpeg", "j"));
-            list.add(new Marker(107, "짬뽕", "http://www.naver.com", 33.122495, 126.14933, "b.jpeg", "j"));
-            list.add(new Marker(108, "삼겹살", "http://www.daum.net", 33.131495, 126.13133, "c.jpeg", "j"));
+        } else if (loc.equals("J")) {
+            list.add(new Marker(106, "국밥", "http://www.nate.com", 33.2641205, 126.570076, "a.jpeg", "J"));
+            list.add(new Marker(107, "짬뽕", "http://www.naver.com", 33.122495, 126.14933, "b.jpeg", "J"));
+            list.add(new Marker(108, "삼겹살", "http://www.daum.net", 33.131495, 126.13133, "c.jpeg", "J"));
 
         }
         JSONArray ja = new JSONArray();
