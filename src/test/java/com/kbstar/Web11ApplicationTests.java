@@ -7,18 +7,22 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Slf4j
 @SpringBootTest
-class Web10ApplicationTests {
-
+class Web11ApplicationTests {
     @Autowired
     private BCryptPasswordEncoder encoder;
 
     @Test
     void contextLoads() {
-        String rawPassword = "333333333333333333";
+        String rawPassword = "pwd01";
         String encPassword = encoder.encode(rawPassword);
+        log.info("----------------------------------------");
+        log.info(rawPassword);
         log.info("암호화 된 비번" + encPassword);
-        boolean result = encoder.matches("111",encPassword);
+        boolean result = encoder.matches(rawPassword,encPassword);
         log.info(result+"");
+        log.info("----------------------------------------");
     }
 
-}
+    }
+
+

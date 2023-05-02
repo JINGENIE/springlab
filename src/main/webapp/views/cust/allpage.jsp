@@ -15,7 +15,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="c" items="${clist}">
+                    <c:forEach var="c" items="${cpage.getList()}">
                         <tr>
                             <td><a href="/cust/get?id=${c.id}">${c.id}</a></td>
 <%--                            <td>${c.pwd}</td>--%>
@@ -24,6 +24,9 @@
                     </c:forEach>
                     </tbody>
                 </table>
+                <jsp:include page="../page.jsp"/>
+                </div>
+                <!-- pagination end -->
             </div>
         </div> <!-- -->
     </div>
