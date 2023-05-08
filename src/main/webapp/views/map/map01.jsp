@@ -7,6 +7,7 @@
         height: 400px;
         border: 2px solid red;
     }
+
 </style>
 <script>
     let map01 = {

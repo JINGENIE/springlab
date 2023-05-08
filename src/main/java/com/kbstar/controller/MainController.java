@@ -30,6 +30,11 @@ public class MainController {
         model.addAttribute("center","login");
         return "index";
     }
+    @RequestMapping("/pic")
+    public String pic(Model model){
+        model.addAttribute("center","pic");
+        return "index";
+    }
     @RequestMapping("/logout")
     public String login(Model model, HttpSession ssession){
         if(ssession != null){
@@ -98,7 +103,11 @@ public class MainController {
         return "index";
     }
 
-
+    @RequestMapping("/websocket")
+    public String websocket(Model model){
+        model.addAttribute("center","websocket");
+        return "index";
+    }
     // /quics?page=bs01
     @RequestMapping("/quics")
     public String quics(String page){
