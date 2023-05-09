@@ -9,7 +9,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @SpringBootApplication
 public class Web14Application {
 
-
     public static void main(String[] args) {
         SpringApplication.run(Web14Application.class, args);
     }
