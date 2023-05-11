@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%-- 통화 혹은 숫자관련--%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%--다국어처리--%>
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -23,7 +26,7 @@
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="https://code.highcharts.com/modules/cylinder.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>
-
+<!-- web socket -->
     <script src="/webjars/sockjs-client/sockjs.min.js"></script>
     <script src="/webjars/stomp-websocket/stomp.min.js"></script>
 
