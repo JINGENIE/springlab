@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Slf4j
 @SpringBootTest
-class Web18ApplicationTests {
+class Web19ApplicationTests {
 
     @Autowired
     private BCryptPasswordEncoder encoder;

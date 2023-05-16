@@ -104,24 +104,7 @@ public class MainController {
         }
         return "index";
     }
-    @RequestMapping("/loginimpl")
-    public String loginimpl(Model model, String id, String pwd,
-                            HttpSession  session) throws Exception {
-        Cust cust = null;
-        String nextPage = "loginfail";
-        try {
-            cust = custService.get(id);
-            if(cust != null && encoder.matches(pwd,cust.getPwd())){
-                nextPage = "loginok";
-                session.setMaxInactiveInterval(100000);
-                session.setAttribute("logincust",cust);
-            }
-        } catch (Exception e) {
-            throw new Exception("시스템 장애 잠시후 다시 로그인 하세요");
-        }
-        model.addAttribute("center",nextPage);
-        return "index";
-    }
+
     @RequestMapping("/registerimpl")
     public String registerimpl(Model model,
                                @Validated Cust cust, Errors errors, HttpSession session) throws Exception {
