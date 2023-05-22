@@ -127,6 +127,26 @@ public class MainController {
         model.addAttribute("center","registerok");
         return "index";
     }
+    @RequestMapping("/loginimpl")
+    public String loginimpl(Model model, String id, String pwd,
+                            HttpSession session) throws Exception {
+
+        Cust cust = null;
+        String nextPage = "loginfail";
+        try {
+            cust = custService.get(id);
+            // 로그인 성공 시
+            if(cust != null && encoder.matches(pwd, cust.getPwd())){
+                nextPage = "loginok";
+                session.setMaxInactiveInterval(100000); // 세션 시간 지정
+                session.setAttribute("logincust", cust);
+            }
+        } catch (Exception e){
+            throw new Exception("시스템 장애. 잠시 후 다시 로그인 해주세요.");
+        }
+        model.addAttribute("center", nextPage);
+        return "index";
+    }
     @RequestMapping("/register")
     public String register(Model model){
         model.addAttribute("center","register");
